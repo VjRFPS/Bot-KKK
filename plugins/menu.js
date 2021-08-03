@@ -31,11 +31,11 @@ let tags = {
 const defaultMenu = {
   before: `
 ╭─「 %me 」
-│ Hai, %name!
+│ Ola, %name!
 │
-│ Tersisa *%limit Limit*
+│ Limite: *%limit Limit*
 │ Role *%role*
-│ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
+│ Level *%level (%exp / %maxexp)* [%xp4 restante para subir.]
 │ %totalexp XP in Total
 │ 
 │ Tanggal: *%week %weton, %date*
