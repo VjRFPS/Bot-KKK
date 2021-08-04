@@ -9,9 +9,9 @@ handler.before = m => {
         
 	if (before !== user.level) {
             m.reply(`
-Selamat, anda telah naik level!
+Parabéns!Você subiu de nível!
 *${before}* -> *${user.level}*
-gunakan *.profile* untuk mengecek
+digite *.profile* para ver mais informações
 	`.trim())
         }
 }
