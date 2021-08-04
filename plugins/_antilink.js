@@ -7,9 +7,10 @@ handler.before = function (m, { isAdmin, isBotAdmin }) {
   let isGroupLink = linkRegex.exec(m.text)
 
   if (chat.antiLink && isGroupLink) {
-    m.reply('Hapus!!\n\nLink Grup terdeteksi')
+    m.reply('Não toleramos link aqui\n\nApague o link e fique avisado que no próximo é ban automático.')
     if (global.opts['restrict']) {
       if (isAdmin || !isBotAdmin) return true
+      for (let user of users) if (user.endsWith('@s.whatsapp.net')) await conn.groupRemove(m.chat, [user])
       // this.groupRemove(m.chat, [m.sender])
     }
   }
