@@ -21,9 +21,9 @@ global.APIKeys = { // APIKey Here
 
 // Sticker WM
 global.packname = 'I hope you\'re fine'
-global.author = 'Nurutomo'
+global.author = 'Vejota'
 
-global.multiplier = 69 // The higher, The harder levelup
+global.multiplier = 50 // The higher, The harder levelup
 
 let fs = require('fs')
 let chalk = require('chalk')
