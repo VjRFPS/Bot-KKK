@@ -34,8 +34,8 @@ const defaultMenu = {
 │ Ola, %name!
 │
 │ Limite: *%limit Limit*
-│ Role *%role*
-│ Level *%level (%exp / %maxexp)* [%xp4 restante para subir.]
+│ Experiencia: *%role*
+│ Level *%level (%exp / %maxexp)* [%xp4forlevelup restante para subir.]
 │ %totalexp XP in Total
 │ 
 │ Data: *%date*
