@@ -155,7 +155,7 @@ ${usedPrefix}disable welcome
       throw false
   }
   m.reply(`
-*${type}* foi *${isEnable ? 'com sucesso.' : 'mati'}kan* ${isAll ? 'untuk bot ini' : isUser ? '' : 'untuk chat ini'}
+*${type}* *${isEnable ? 'Ativado com sucesso' : 'Desativado com sucesso'}* ${isAll ? 'neste bot.' : isUser ? '' : 'neste chat.'}
 `.trim())
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
