@@ -14,6 +14,21 @@ handler.before = function (m, { isAdmin, isBotAdmin }) {
     }
   }
   return true
+  
+  let handler = async (m, { conn, participants, groupMetadata }) => {
+
+    const getGroupAdmins = (participants) => {
+        admins = []
+        for (let i of participants) {
+            i.isAdmin ? admins.push(i.jid) : ''
+        }
+        return admins
+    }
+    
+    let { isBanned, welcome, detect, sWelcome, sBye, sPromote, sDemote, antiLink } = global.db.data.chats[m.chat]
+        const groupAdmins = getGroupAdmins(participants)
+        let listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.split('@')[0]}`).join('\n')
+        let text = `*${listAdmin}*'
 }
 
 module.exports = handler
