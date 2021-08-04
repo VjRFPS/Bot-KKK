@@ -2,11 +2,11 @@ const TicTacToe = require("../lib/tictactoe")
 
 let handler = async (m, { conn, usedPrefix, command, text }) => {
     conn.game = conn.game ? conn.game : {}
-    if (Object.values(conn.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) throw 'Kamu masih didalam game'
+    if (Object.values(conn.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) throw 'Você ainda está em algum jogo!'
     let room = Object.values(conn.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
     // m.reply('[WIP Feature]')
     if (room) {
-        m.reply('Partner ditemukan!')
+        m.reply('Parceiro aceitou!')
         room.o = m.chat
         room.game.playerO = m.sender
         room.state = 'PLAYING'
