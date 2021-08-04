@@ -1,5 +1,14 @@
 let handler = m => m
 
+let handler = async (m, { conn, participants, groupMetadata }) => {
+
+    const getGroupAdmins = (participants) => {
+        admins = []
+        for (let i of participants) {
+            i.isAdmin ? admins.push(i.jid) : ''
+        }
+        return admins
+
 let linkRegex = /chat.whatsapp.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i
 handler.before = function (m, { isAdmin, isBotAdmin }) {
   if (m.isBaileys && m.fromMe) return true
@@ -7,7 +16,8 @@ handler.before = function (m, { isAdmin, isBotAdmin }) {
   let isGroupLink = linkRegex.exec(m.text)
 
   if (chat.antiLink && isGroupLink) {
-    m.reply('Não toleramos link aqui\n\nApague o link e fique avisado que no próximo é ban automático.')
+    m.reply('Não toleramos link aqui.Apague o link.\n\n')
+    ${listAdmin}
     if (global.opts['restrict']) {
       if (isAdmin || !isBotAdmin) return true
       conn.groupRemove(m.chat, [user])
