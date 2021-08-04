@@ -17,7 +17,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let str = `
 Nome: ${username} ${registered ? '(' + name + ') ': ''}(@${who.replace(/@.+/, '')})${about ? '\nRecado: ' + about : ''}
 Número: ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
-Link: https://wa.me/${who.split`@`[0]}${registered ? '\nAge: ' + age : ''}
+Link: https://wa.me/${who.split`@`[0]}${registered ? '\nIdade: ' + age : ''}
 XP: TOTAL ${exp} (${exp - min} / ${xp}) [${math <= 0 ? `Ready to *${usedPrefix}levelup*` : `${math} XP left to levelup`}]
 Level: ${level}
 Expericencia: *${role}*
