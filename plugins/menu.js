@@ -38,12 +38,10 @@ const defaultMenu = {
 │ Level *%level (%exp / %maxexp)* [%xp4 restante para subir.]
 │ %totalexp XP in Total
 │ 
-│ Tanggal: *%week %weton, %date*
-│ Tanggal Islam: *%dateIslamic*
-│ Waktu: *%time*
+│ Data: *%date*
 │
-│ Uptime: *%uptime (%muptime)*
-│ Database: %rtotalreg of %totalreg
+│ Tempo ativo do bot: *%uptime (%muptime)*
+│ Perfis registrados na database(Reinicia sempre que o bot reinicia): %rtotalreg of %totalreg
 │ Github:
 │ %github
 ╰────
