@@ -31,7 +31,7 @@ ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
-Menunggu @${room.game.currentTurn.split('@')[0]}
+Esperando o @${room.game.currentTurn.split('@')[0]}
 Digite *nyerah* para desistir
 `.trim()
         if (room.x !== room.o) m.reply(str, room.x, {
