@@ -7,11 +7,10 @@ handler.before = function (m, { isAdmin, isBotAdmin }) {
   let isGroupLink = linkRegex.exec(m.text)
 
   if (chat.antiLink && isGroupLink) {
-    m.reply('Não toleramos link aqui.Apague o link.\n\n')
+    m.reply('Não toleramos link aqui.Apague o link.\n\n ${listAdmin}')
     if (global.opts['restrict']) {
       if (isAdmin || !isBotAdmin) return true
       conn.groupRemove(m.chat, [user])
-    m.reply('${listAdmin}')
     }
   }
   return true
