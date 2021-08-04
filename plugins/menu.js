@@ -31,6 +31,10 @@ let tags = {
 const defaultMenu = {
   before: `
 ╭─「 %me 」
+│
+│*ALGUMAS PARTES DO BOT AINDA ESTÃO EM ALIENIGENA(INDONÉSIO),\nMAS É PQ A BASE DO BOT É DA INDONÉSIA.\n
+│ AOS POUCOS VOU TRADUZINDO TUDO*
+│
 │ Ola, %name!
 │
 │ Limite: *%limit Limit*
