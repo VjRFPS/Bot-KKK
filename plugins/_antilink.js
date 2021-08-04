@@ -8,10 +8,10 @@ handler.before = function (m, { isAdmin, isBotAdmin }) {
 
   if (chat.antiLink && isGroupLink) {
     m.reply('Não toleramos link aqui.Apague o link.\n\n')
-    ${listAdmin}
     if (global.opts['restrict']) {
       if (isAdmin || !isBotAdmin) return true
       conn.groupRemove(m.chat, [user])
+    m.reply('${listAdmin}')
     }
   }
   return true
