@@ -1,14 +1,5 @@
 let handler = m => m
 
-let handler = async (m, { conn, participants, groupMetadata }) => {
-
-    const getGroupAdmins = (participants) => {
-        admins = []
-        for (let i of participants) {
-            i.isAdmin ? admins.push(i.jid) : ''
-        }
-        return admins
-
 let linkRegex = /chat.whatsapp.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i
 handler.before = function (m, { isAdmin, isBotAdmin }) {
   if (m.isBaileys && m.fromMe) return true
