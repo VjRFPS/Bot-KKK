@@ -32,7 +32,7 @@ ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
 Menunggu @${room.game.currentTurn.split('@')[0]}
-Ketik *nyerah* untuk nyerah
+Digite *nyerah* para desistir
 `.trim()
         if (room.x !== room.o) m.reply(str, room.x, {
             contextInfo: {
@@ -53,7 +53,7 @@ Ketik *nyerah* untuk nyerah
             state: 'WAITING'
         }
         if (text) room.name = text
-        m.reply('Esperando parceiro' + (text ? `Digirtar o comando abaixo:
+        m.reply('Esperando parceiro' + (text ? ` digitar o comando abaixo:
 ${usedPrefix}${command} ${text}` : ''))
         conn.game[room.id] = room
     }
