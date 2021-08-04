@@ -10,8 +10,7 @@ handler.before = function (m, { isAdmin, isBotAdmin }) {
     m.reply('Não toleramos link aqui\n\nApague o link e fique avisado que no próximo é ban automático.')
     if (global.opts['restrict']) {
       if (isAdmin || !isBotAdmin) return true
-      for (let user of users) if (user.endsWith('@s.whatsapp.net')) await conn.groupRemove(m.chat, [user])
-      // this.groupRemove(m.chat, [m.sender])
+      this.groupRemove(m.chat, [m.sender])
     }
   }
   return true
