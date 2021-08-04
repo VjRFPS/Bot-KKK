@@ -53,7 +53,7 @@ Ketik *nyerah* untuk nyerah
             state: 'WAITING'
         }
         if (text) room.name = text
-        m.reply('Menunggu partner' + (text ? `mengetik command dibawah ini
+        m.reply('Esperando parceiro' + (text ? `Digirtar o comando abaixo:
 ${usedPrefix}${command} ${text}` : ''))
         conn.game[room.id] = room
     }
