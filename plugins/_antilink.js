@@ -17,5 +17,7 @@ handler.before = function (m, { isAdmin, isBotAdmin }) {
 
 
 }
+handler.admin = false
+handler.botAdmin = true
 
 module.exports = handler
