@@ -10,7 +10,7 @@ handler.before = function (m, { isAdmin, isBotAdmin }) {
     m.reply('Não toleramos link de outros grupos aqui.Apague o link.\n\n')
     if (global.opts['restrict']) {
       if (isAdmin || !isBotAdmin) return true
-      conn.groupRemove(m.chat, [m.sender])
+      this.groupRemove(m.chat, [m.sender])
     }
   }
   return true
