@@ -38,11 +38,11 @@ let handler = async (m, { conn }) => {
     }
   })
   let old = performance.now()
-  await m.reply('_Testing speed..._')
+  await m.reply('_Testando tempo de resposta..._')
   let neww = performance.now()
   let speed = neww - old
   m.reply(`
-Merespon dalam ${speed} millidetik
+Tempo de resposta foi de ${speed} milisegundos
 
 💬 Status :
 - *${groups.length}* Group Chats
